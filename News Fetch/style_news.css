@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    margin:0;
+    background: #8a9fe1;
+}
+header{
+    background-color: #84a2fc;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    justify-content: space-between;
+    box-shadow: 0px 3px 10px 0 rgba(4, 16, 53, 0.3);
+}
+nav ul{
+    display: flex;
+    font-size: 1.2rem;
+    list-style: none;
+    gap: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 0;
+}
+nav ul li{
+    cursor: pointer;
+}
+nav ul li:hover{
+    color:#036a90;
+    font-size: 1.5rem;
+}
+
+.inputSearch,form{
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 450px;
+    border-radius: 35px;
+    overflow: hidden;
+    border: 1.5px solid #08175b;
+}
+.inputSearch  input{
+    width: 100%;
+    height: 100%;
+    padding: 0px 15px;
+    border:none;
+    outline: none;
+    font-size: 20px;
+}
+.inputSearch span{
+    width: 80px;
+    background-color: #071449;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color:white;
+}
+.menuBtn{
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.menuBtn:hover{
+    background-color: #060f37;
+    color:#f8f3f3;
+}
+.desktop{
+    display: none;
+}
+@media all and (min-width:700px) {
+    header{
+        padding: 5px 30px;
+    }
+    .desktop{
+        display: flex;
+    }
+    .menuBtn{
+        display: none;
+    }
+}
+
+
+/***mobile menu ****/
+.mobile{
+    position: fixed;
+    top: 70px;
+    width: 100%;
+    max-width: 700px;
+    background-color:#f5f6f9 ;
+    height: 100vh;
+    padding: 20px;
+    box-shadow: none;
+    z-index: 2;
+    margin-left: -10px;
+}
+.mobile nav,
+.mobile nav ul{
+    flex-direction: column;
+}
+
+.mobile .inputSearch,
+.mobile form{
+    height: 35px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media all and (min-width:700px) {
+ .mobile{
+    display: none;
+ }   
+}
+
+
+
+/***css card***/
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 10px;
+    margin: auto;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    box-shadow: 7px 7px 25px 1px rgba(0,0,0,0.06);
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    justify-content: flex-start;
+    background: #083a78;
+    border-radius:2rem ;
+    color:#fff;
+    transition: transform 0.3s ease-in-out;
+}
+.card:hover{
+    transform: scale(1.02);
+    font-size: larger;
+    background-color: #2b3c43;
+    box-shadow: #060f37;
+}
+.card img{
+    min-height: 210px;
+    max-height: 210px;
+    background-color: #f4f4f4;
+}
+.card h4,
+.card div{
+    padding: 5px 10px;
+    margin: 0px;
+}
+.publishbyDate{
+    display: flex;
+    align-items: center;
+    color:#a5a1a1;
+}
+.publishbyDate p{
+    margin:0px;
+    font-size: 14px;
+}
+.publishbyDate span{
+    padding: 0px 10px;
+}
+.desc{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    margin:0;
+
+}
+.card a{
+    color:inherit;
+    text-decoration: none;
+}
+@media all and (min-width:700px) {
+    main{
+        padding: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card h4,
+.card div{
+    padding: 5px 15px;
+}
+}
